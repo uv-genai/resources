@@ -1,0 +1,17 @@
+* LoRA
+  LoRA is a method for fine-tuning pre-trained language models by training a low-rank adaptation 
+  layer on top of the base model. 
+  This method is particularly useful for tasks that require a large amount of data, such as 
+  language translation or text generation.
+
+* Online resources
+
+  [[https://www.youtube.com/watch?v=DhRoTONcyZE][What is Low-Rank Adaptation (LoRA) | explained by the inventor]]
+  
+  [[https://arxiv.org/abs/2106.09685][LoRA: Low-Rank Adaptation of Large Language Models]]
+
+  [[https://www.youtube.com/watch?v=D3pXSkGceY0&t=1065s][How to Fine Tune your own LLM using LoRA (on a CUSTOM dataset!)]]
+
+  
+
+

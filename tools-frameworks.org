@@ -1,0 +1,6 @@
+* Frameworks
+  [[https://github.com/deepspeedai/DeepSpeed][DeepSpeed, accelerate training and inference]]
+  [[https://www.youtube.com/watch?v=3Rj3zbiCFBM][Speed up training and inference of GPT-Neo 1.6B by 45+% using DeepSpeed]]
+  [[https://blog.cerebrium.ai/speed-up-training-and-inference-of-gpt-neo-1-6b-by-45-using-deepspeed-1a9815411f27][Speed up training and inference of GPT-Neo 1.6B by 45+% using DeepSpeed]]
+  [[https://github.com/stas00/gpt-neo-fine-tuning-example.git][Training and inference with DeepSpeed]]
+
