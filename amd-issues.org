@@ -1,0 +1,3 @@
+
+(vllm) experts_int8 quantization is currently not supported in rocm.
+pytorch: RuntimeError: torch._scaled_mm is only supported on CUDA devices with compute capability >= 9.0 or 8.9, or ROCm MI300+
