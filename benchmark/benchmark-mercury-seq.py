@@ -36,7 +36,11 @@ def main():
     for i in range(min(args.num_requests, len(prompts))):
         prompt = prompts[i]
         headers = {'Authorization': f'Bearer {args.api_key}'}
-        data = {'prompt': prompt, 'max_tokens': 100}
+        data = {
+            'prompt': prompt,
+            'max_tokens': 100,
+            'model': args.model
+        }
 
         start_time = time.time()
         response = requests.post(args.url, headers=headers, json=data)
