@@ -1,0 +1,299 @@
+build: 5753 (73e53dc8) with gcc (GCC) 12.2.0 20220819 (HPE) for x86_64-suse-linux
+system info: n_threads = 128, n_threads_batch = 128, total_threads = 256
+
+system_info: n_threads = 128 (n_threads_batch = 128) / 256 | CPU : SSE3 = 1 | SSSE3 = 1 | AVX = 1 | AVX2 = 1 | F16C = 1 | FMA = 1 | BMI2 = 1 | LLAMAFILE = 1 | OPENMP = 1 | REPACK = 1 | 
+
+main: binding port with default address family
+main: HTTP server is listening, hostname: 0.0.0.0, port: 8080, http threads: 255
+main: loading model
+srv    load_model: loading model '/home/uvaretto/scratch_0001/models/arcee-ai-Virtuoso-Large-GGUF/Virtuoso-Large-Q8_0.gguf'
+llama_model_loader: loaded meta data with 29 key-value pairs and 963 tensors from /home/uvaretto/scratch_0001/models/arcee-ai-Virtuoso-Large-GGUF/Virtuoso-Large-Q8_0.gguf (version GGUF V3 (latest))
+llama_model_loader: Dumping metadata keys/values. Note: KV overrides do not apply in this output.
+llama_model_loader: - kv   0:                       general.architecture str              = qwen2
+llama_model_loader: - kv   1:                               general.type str              = model
+llama_model_loader: - kv   2:                               general.name str              = Virtuoso Large
+llama_model_loader: - kv   3:                           general.basename str              = Virtuoso
+llama_model_loader: - kv   4:                         general.size_label str              = Large
+llama_model_loader: - kv   5:                          qwen2.block_count u32              = 80
+llama_model_loader: - kv   6:                       qwen2.context_length u32              = 131072
+llama_model_loader: - kv   7:                     qwen2.embedding_length u32              = 8192
+llama_model_loader: - kv   8:                  qwen2.feed_forward_length u32              = 29568
+llama_model_loader: - kv   9:                 qwen2.attention.head_count u32              = 64
+llama_model_loader: - kv  10:              qwen2.attention.head_count_kv u32              = 8
+llama_model_loader: - kv  11:                       qwen2.rope.freq_base f32              = 1000000.000000
+llama_model_loader: - kv  12:     qwen2.attention.layer_norm_rms_epsilon f32              = 0.000001
+llama_model_loader: - kv  13:                       tokenizer.ggml.model str              = gpt2
+llama_model_loader: - kv  14:                         tokenizer.ggml.pre str              = qwen2
+llama_model_loader: - kv  15:                      tokenizer.ggml.tokens arr[str,152064]  = ["!", "\"", "#", "$", "%", "&", "'", ...
+llama_model_loader: - kv  16:                  tokenizer.ggml.token_type arr[i32,152064]  = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, ...
+llama_model_loader: - kv  17:                      tokenizer.ggml.merges arr[str,151387]  = ["Ġ Ġ", "ĠĠ ĠĠ", "i n", "Ġ t",...
+llama_model_loader: - kv  18:                tokenizer.ggml.eos_token_id u32              = 151645
+llama_model_loader: - kv  19:            tokenizer.ggml.padding_token_id u32              = 151643
+llama_model_loader: - kv  20:                tokenizer.ggml.bos_token_id u32              = 151643
+llama_model_loader: - kv  21:               tokenizer.ggml.add_bos_token bool             = false
+llama_model_loader: - kv  22:                    tokenizer.chat_template str              = {%- if tools %}\n    {{- '<|im_start|>...
+llama_model_loader: - kv  23:               general.quantization_version u32              = 2
+llama_model_loader: - kv  24:                          general.file_type u32              = 7
+llama_model_loader: - kv  25:                      quantize.imatrix.file str              = /models_out/Virtuoso-Large-GGUF/arcee...
+llama_model_loader: - kv  26:                   quantize.imatrix.dataset str              = /training_dir/calibration_datav3.txt
+llama_model_loader: - kv  27:             quantize.imatrix.entries_count i32              = 560
+llama_model_loader: - kv  28:              quantize.imatrix.chunks_count i32              = 498
+llama_model_loader: - type  f32:  401 tensors
+llama_model_loader: - type q8_0:  562 tensors
+print_info: file format = GGUF V3 (latest)
+print_info: file type   = Q8_0
+print_info: file size   = 71.95 GiB (8.50 BPW) 
+load: special tokens cache size = 22
+load: token to piece cache size = 0.9310 MB
+print_info: arch             = qwen2
+print_info: vocab_only       = 0
+print_info: n_ctx_train      = 131072
+print_info: n_embd           = 8192
+print_info: n_layer          = 80
+print_info: n_head           = 64
+print_info: n_head_kv        = 8
+print_info: n_rot            = 128
+print_info: n_swa            = 0
+print_info: is_swa_any       = 0
+print_info: n_embd_head_k    = 128
+print_info: n_embd_head_v    = 128
+print_info: n_gqa            = 8
+print_info: n_embd_k_gqa     = 1024
+print_info: n_embd_v_gqa     = 1024
+print_info: f_norm_eps       = 0.0e+00
+print_info: f_norm_rms_eps   = 1.0e-06
+print_info: f_clamp_kqv      = 0.0e+00
+print_info: f_max_alibi_bias = 0.0e+00
+print_info: f_logit_scale    = 0.0e+00
+print_info: f_attn_scale     = 0.0e+00
+print_info: n_ff             = 29568
+print_info: n_expert         = 0
+print_info: n_expert_used    = 0
+print_info: causal attn      = 1
+print_info: pooling type     = -1
+print_info: rope type        = 2
+print_info: rope scaling     = linear
+print_info: freq_base_train  = 1000000.0
+print_info: freq_scale_train = 1
+print_info: n_ctx_orig_yarn  = 131072
+print_info: rope_finetuned   = unknown
+print_info: ssm_d_conv       = 0
+print_info: ssm_d_inner      = 0
+print_info: ssm_d_state      = 0
+print_info: ssm_dt_rank      = 0
+print_info: ssm_dt_b_c_rms   = 0
+print_info: model type       = 70B
+print_info: model params     = 72.71 B
+print_info: general.name     = Virtuoso Large
+print_info: vocab type       = BPE
+print_info: n_vocab          = 152064
+print_info: n_merges         = 151387
+print_info: BOS token        = 151643 '<|endoftext|>'
+print_info: EOS token        = 151645 '<|im_end|>'
+print_info: EOT token        = 151645 '<|im_end|>'
+print_info: PAD token        = 151643 '<|endoftext|>'
+print_info: LF token         = 198 'Ċ'
+print_info: FIM PRE token    = 151659 '<|fim_prefix|>'
+print_info: FIM SUF token    = 151661 '<|fim_suffix|>'
+print_info: FIM MID token    = 151660 '<|fim_middle|>'
+print_info: FIM PAD token    = 151662 '<|fim_pad|>'
+print_info: FIM REP token    = 151663 '<|repo_name|>'
+print_info: FIM SEP token    = 151664 '<|file_sep|>'
+print_info: EOG token        = 151643 '<|endoftext|>'
+print_info: EOG token        = 151645 '<|im_end|>'
+print_info: EOG token        = 151662 '<|fim_pad|>'
+print_info: EOG token        = 151663 '<|repo_name|>'
+print_info: EOG token        = 151664 '<|file_sep|>'
+print_info: max token length = 256
+load_tensors: loading model tensors, this can take a while... (mmap = false)
+load_tensors: offloading 0 repeating layers to GPU
+load_tensors: offloaded 0/81 layers to GPU
+load_tensors:          CPU model buffer size = 73677.66 MiB
+...................................................................................................
+llama_context: constructing llama_context
+llama_context: n_seq_max     = 1
+llama_context: n_ctx         = 4096
+llama_context: n_ctx_per_seq = 4096
+llama_context: n_batch       = 2048
+llama_context: n_ubatch      = 512
+llama_context: causal_attn   = 1
+llama_context: flash_attn    = 0
+llama_context: freq_base     = 1000000.0
+llama_context: freq_scale    = 1
+llama_context: n_ctx_per_seq (4096) < n_ctx_train (131072) -- the full capacity of the model will not be utilized
+llama_context:        CPU  output buffer size =     0.58 MiB
+llama_kv_cache_unified:        CPU KV buffer size =  1280.00 MiB
+llama_kv_cache_unified: size = 1280.00 MiB (  4096 cells,  80 layers,  1 seqs), K (f16):  640.00 MiB, V (f16):  640.00 MiB
+llama_context:        CPU compute buffer size =   584.01 MiB
+llama_context: graph nodes  = 3126
+llama_context: graph splits = 1282 (with bs=512), 1 (with bs=1)
+common_init_from_params: setting dry_penalty_last_n to ctx_size = 4096
+common_init_from_params: warming up the model with an empty run - please wait ... (--no-warmup to disable)
+srv          init: initializing slots, n_slots = 1
+slot         init: id  0 | task -1 | new slot n_ctx_slot = 4096
+main: model loaded
+main: chat template, chat_template: {%- if tools %}
+    {{- '<|im_start|>system\n' }}
+    {%- if messages[0]['role'] == 'system' %}
+        {{- messages[0]['content'] }}
+    {%- else %}
+        {{- 'You are Virtuoso Large, created by Arcee AI. You are a helpful assistant.' }}
+    {%- endif %}
+    {{- "\n\n# Tools\n\nYou may call one or more functions to assist with the user query.\n\nYou are provided with function signatures within <tools></tools> XML tags:\n<tools>" }}
+    {%- for tool in tools %}
+        {{- "\n" }}
+        {{- tool | tojson }}
+    {%- endfor %}
+    {{- "\n</tools>\n\nFor each function call, return a json object with function name and arguments within <tool_call></tool_call> XML tags:\n<tool_call>\n{\"name\": <function-name>, \"arguments\": <args-json-object>}\n</tool_call><|im_end|>\n" }}
+{%- else %}
+    {%- if messages[0]['role'] == 'system' %}
+        {{- '<|im_start|>system\n' + messages[0]['content'] + '<|im_end|>\n' }}
+    {%- else %}
+        {{- '<|im_start|>system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>\n' }}
+    {%- endif %}
+{%- endif %}
+{%- for message in messages %}
+    {%- if (message.role == "user") or (message.role == "system" and not loop.first) or (message.role == "assistant" and not message.tool_calls) %}
+        {{- '<|im_start|>' + message.role + '\n' + message.content + '<|im_end|>' + '\n' }}
+    {%- elif message.role == "assistant" %}
+        {{- '<|im_start|>' + message.role }}
+        {%- if message.content %}
+            {{- '\n' + message.content }}
+        {%- endif %}
+        {%- for tool_call in message.tool_calls %}
+            {%- if tool_call.function is defined %}
+                {%- set tool_call = tool_call.function %}
+            {%- endif %}
+            {{- '\n<tool_call>\n{"name": "' }}
+            {{- tool_call.name }}
+            {{- '", "arguments": ' }}
+            {{- tool_call.arguments | tojson }}
+            {{- '}\n</tool_call>' }}
+        {%- endfor %}
+        {{- '<|im_end|>\n' }}
+    {%- elif message.role == "tool" %}
+        {%- if (loop.index0 == 0) or (messages[loop.index0 - 1].role != "tool") %}
+            {{- '<|im_start|>user' }}
+        {%- endif %}
+        {{- '\n<tool_response>\n' }}
+        {{- message.content }}
+        {{- '\n</tool_response>' }}
+        {%- if loop.last or (messages[loop.index0 + 1].role != "tool") %}
+            {{- '<|im_end|>\n' }}
+        {%- endif %}
+    {%- endif %}
+{%- endfor %}
+{%- if add_generation_prompt %}
+    {{- '<|im_start|>assistant\n' }}
+{%- endif %}
+, example_format: '<|im_start|>system
+You are a helpful assistant<|im_end|>
+<|im_start|>user
+Hello<|im_end|>
+<|im_start|>assistant
+Hi there<|im_end|>
+<|im_start|>user
+How are you?<|im_end|>
+<|im_start|>assistant
+'
+main: server is listening on http://0.0.0.0:8080 - starting the main loop
+srv  update_slots: all slots are idle
+srv  log_server_r: request: GET /v1/models 172.23.0.10 200
+srv  log_server_r: request: GET /v1/models 172.23.0.10 200
+slot launch_slot_: id  0 | task 0 | processing task
+slot update_slots: id  0 | task 0 | new prompt, n_ctx_slot = 4096, n_keep = 0, n_prompt_tokens = 10
+slot update_slots: id  0 | task 0 | kv cache rm [0, end)
+slot update_slots: id  0 | task 0 | prompt processing progress, n_past = 10, n_tokens = 10, progress = 1.000000
+slot update_slots: id  0 | task 0 | prompt done, n_past = 10, n_tokens = 10
+slot      release: id  0 | task 0 | stop processing: n_past = 159, truncated = 0
+slot print_timing: id  0 | task 0 | 
+prompt eval time =   33468.03 ms /    10 tokens ( 3346.80 ms per token,     0.30 tokens per second)
+       eval time =  934326.83 ms /   150 tokens ( 6228.85 ms per token,     0.16 tokens per second)
+      total time =  967794.86 ms /   160 tokens
+srv  update_slots: all slots are idle
+slot launch_slot_: id  0 | task 151 | processing task
+slot update_slots: id  0 | task 151 | new prompt, n_ctx_slot = 4096, n_keep = 0, n_prompt_tokens = 7
+slot update_slots: id  0 | task 151 | kv cache rm [0, end)
+slot update_slots: id  0 | task 151 | prompt processing progress, n_past = 7, n_tokens = 7, progress = 1.000000
+slot update_slots: id  0 | task 151 | prompt done, n_past = 7, n_tokens = 7
+slot      release: id  0 | task 151 | stop processing: n_past = 156, truncated = 0
+slot print_timing: id  0 | task 151 | 
+prompt eval time =   28010.64 ms /     7 tokens ( 4001.52 ms per token,     0.25 tokens per second)
+       eval time =  934843.05 ms /   150 tokens ( 6232.29 ms per token,     0.16 tokens per second)
+      total time =  962853.69 ms /   157 tokens
+srv  update_slots: all slots are idle
+slot launch_slot_: id  0 | task 302 | processing task
+slot update_slots: id  0 | task 302 | new prompt, n_ctx_slot = 4096, n_keep = 0, n_prompt_tokens = 8
+slot update_slots: id  0 | task 302 | kv cache rm [3, end)
+slot update_slots: id  0 | task 302 | prompt processing progress, n_past = 8, n_tokens = 5, progress = 0.625000
+slot update_slots: id  0 | task 302 | prompt done, n_past = 8, n_tokens = 5
+slot      release: id  0 | task 302 | stop processing: n_past = 157, truncated = 0
+slot print_timing: id  0 | task 302 | 
+prompt eval time =   24475.93 ms /     5 tokens ( 4895.19 ms per token,     0.20 tokens per second)
+       eval time =  934670.05 ms /   150 tokens ( 6231.13 ms per token,     0.16 tokens per second)
+      total time =  959145.98 ms /   155 tokens
+srv  update_slots: all slots are idle
+slot launch_slot_: id  0 | task 453 | processing task
+slot update_slots: id  0 | task 453 | new prompt, n_ctx_slot = 4096, n_keep = 0, n_prompt_tokens = 8
+slot update_slots: id  0 | task 453 | kv cache rm [0, end)
+slot update_slots: id  0 | task 453 | prompt processing progress, n_past = 8, n_tokens = 8, progress = 1.000000
+slot update_slots: id  0 | task 453 | prompt done, n_past = 8, n_tokens = 8
+slot      release: id  0 | task 453 | stop processing: n_past = 157, truncated = 0
+slot print_timing: id  0 | task 453 | 
+prompt eval time =   29759.12 ms /     8 tokens ( 3719.89 ms per token,     0.27 tokens per second)
+       eval time =  934936.18 ms /   150 tokens ( 6232.91 ms per token,     0.16 tokens per second)
+      total time =  964695.30 ms /   158 tokens
+srv  update_slots: all slots are idle
+slot launch_slot_: id  0 | task 604 | processing task
+slot update_slots: id  0 | task 604 | new prompt, n_ctx_slot = 4096, n_keep = 0, n_prompt_tokens = 10
+slot update_slots: id  0 | task 604 | kv cache rm [0, end)
+slot update_slots: id  0 | task 604 | prompt processing progress, n_past = 10, n_tokens = 10, progress = 1.000000
+slot update_slots: id  0 | task 604 | prompt done, n_past = 10, n_tokens = 10
+slot      release: id  0 | task 604 | stop processing: n_past = 159, truncated = 0
+slot print_timing: id  0 | task 604 | 
+prompt eval time =   33345.21 ms /    10 tokens ( 3334.52 ms per token,     0.30 tokens per second)
+       eval time =  931800.72 ms /   150 tokens ( 6212.00 ms per token,     0.16 tokens per second)
+      total time =  965145.93 ms /   160 tokens
+srv  update_slots: all slots are idle
+slot launch_slot_: id  0 | task 755 | processing task
+slot update_slots: id  0 | task 755 | new prompt, n_ctx_slot = 4096, n_keep = 0, n_prompt_tokens = 7
+slot update_slots: id  0 | task 755 | kv cache rm [0, end)
+slot update_slots: id  0 | task 755 | prompt processing progress, n_past = 7, n_tokens = 7, progress = 1.000000
+slot update_slots: id  0 | task 755 | prompt done, n_past = 7, n_tokens = 7
+slot      release: id  0 | task 755 | stop processing: n_past = 156, truncated = 0
+slot print_timing: id  0 | task 755 | 
+prompt eval time =   28231.47 ms /     7 tokens ( 4033.07 ms per token,     0.25 tokens per second)
+       eval time =  931805.63 ms /   150 tokens ( 6212.04 ms per token,     0.16 tokens per second)
+      total time =  960037.10 ms /   157 tokens
+srv  update_slots: all slots are idle
+slot launch_slot_: id  0 | task 906 | processing task
+slot update_slots: id  0 | task 906 | new prompt, n_ctx_slot = 4096, n_keep = 0, n_prompt_tokens = 10
+slot update_slots: id  0 | task 906 | kv cache rm [0, end)
+slot update_slots: id  0 | task 906 | prompt processing progress, n_past = 10, n_tokens = 10, progress = 1.000000
+slot update_slots: id  0 | task 906 | prompt done, n_past = 10, n_tokens = 10
+srv  cancel_tasks: cancel task, id_task = 906
+slot      release: id  0 | task 906 | stop processing: n_past = 49, truncated = 0
+srv  update_slots: all slots are idle
+slot launch_slot_: id  0 | task 948 | processing task
+slot update_slots: id  0 | task 948 | new prompt, n_ctx_slot = 4096, n_keep = 0, n_prompt_tokens = 7
+slot update_slots: id  0 | task 948 | kv cache rm [0, end)
+slot update_slots: id  0 | task 948 | prompt processing progress, n_past = 7, n_tokens = 7, progress = 1.000000
+slot update_slots: id  0 | task 948 | prompt done, n_past = 7, n_tokens = 7
+srv  cancel_tasks: cancel task, id_task = 948
+slot      release: id  0 | task 948 | stop processing: n_past = 56, truncated = 0
+srv  update_slots: all slots are idle
+srv  log_server_r: request: GET / 172.23.0.13 200
+srv  log_server_r: request: GET /props 172.23.0.13 200
+srv  params_from_: Chat format: Content-only
+slot launch_slot_: id  0 | task 1000 | processing task
+slot update_slots: id  0 | task 1000 | new prompt, n_ctx_slot = 4096, n_keep = 0, n_prompt_tokens = 12
+slot update_slots: id  0 | task 1000 | kv cache rm [0, end)
+slot update_slots: id  0 | task 1000 | prompt processing progress, n_past = 12, n_tokens = 12, progress = 1.000000
+slot update_slots: id  0 | task 1000 | prompt done, n_past = 12, n_tokens = 12
+srv  cancel_tasks: cancel task, id_task = 1000
+srv  log_server_r: request: POST /v1/chat/completions 172.23.0.13 200
+slot      release: id  0 | task 1000 | stop processing: n_past = 15, truncated = 0
+srv  update_slots: all slots are idle
+slurmstepd: error: *** STEP 26750516.0 ON nid001245 CANCELLED AT 2025-06-27T18:12:04 ***
+slurmstepd: error: *** JOB 26750516 ON nid001245 CANCELLED AT 2025-06-27T18:12:04 ***
+srv    operator(): operator(): cleaning up before exit...

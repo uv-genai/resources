@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+#SBATCH --job-name=llama.cpp
+#SBATCH --account=pawsey0001
+#SBATCH --exclusive
+#SBATCH --time=1-00:00:00
+#SBATCH --nodes=1
+#SBATCH --partition=work
+export LD_LIBRARY_PATH=$HOME/.opt/llama.cpp-cpu/lib64:$LD_LIBRARY_PATH
+export PATH=$HOME/.opt/llama.cpp-cpu/bin:$PATH
+export MODEL=$HOME/scratch_0001/models/arcee-ai-Virtuoso-Large-GGUF/Virtuoso-Large-Q8_0.gguf
+srun llama-server -m $MODEL --no-mmap --host 0.0.0.0 --port 8080
