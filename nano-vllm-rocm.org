@@ -1,0 +1,26 @@
+Ubuntu 24.04 with ROCm 6.4.1. 
+
+uv venv environmentuv venv --python 3.12 nano-vllm && source nano-vllm/bin/activate2. 
+
+Install pytorch and flash attention (I installed also audio and vision for later)FLASH_ATTENTION_TRITON_AMD_ENABLE="TRUE"
+
+uv pip install --pre torch torchvision torchaudio --index-url [https://download.pytorch.org/whl/nightly/rocm6.4
+FLASH_ATTENTION_TRITON_AMD_ENABLE="TRUE" uv pip install "flash-attn==2.8.0.post2"3.
+
+Clone the Nano-vLLM repo
+
+git clone https://github.com/GeeeekExplorer/nano-vllm.git && cd nano-vllm4.
+
+Remove the license = "MIT" from pyproject.toml file - otherwise you'll get an error during build5. 
+
+Build the Nano-vLLM
+
+FLASH_ATTENTION_TRITON_AMD_ENABLE="TRUE" uv pip install --no-build-isolation
+
+Modify the example.py to use your favorite local model.
+
+You're now ready to play with Nano-vLLM (remember about the FLASH_ATTENTION_TRITON_AMD_ENABLE="TRUE")
+
+~/sources/nano-vllm$ FLASH_ATTENTION_TRITON_AMD_ENABLE="TRUE" python example.py
+
+
